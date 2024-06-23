@@ -1,55 +1,54 @@
-# Sistem de Gestiune Înscrieri
+# Enrollment Management System
 
-## Introducere
-Acest proiect implementează un sistem backend pentru gestionarea înscrierilor participanților la diverse evenimente educaționale. Aplicația permite gestionarea eficientă a participanților, oferind funcționalități pentru adăugarea, verificarea, actualizarea, și eliminarea participanților, precum și gestionarea unei liste de așteptare.
+## Introduction
+This project implements a backend system for managing enrollments of participants in various educational events. The application allows efficient management of participants, providing functionalities for adding, checking, updating, and removing participants, as well as managing a waitlist.
 
-## Structura Proiectului
-Proiectul este structurat în trei clase principale:
-1. **Guest**: Reprezintă un participant la eveniment.
-2. **GuestsList**: Gestiunea listei de participanți.
-3. **Main**: Interfața principală a aplicației pentru interacțiunea cu utilizatorul.
+## Project Structure
+The project is structured into three main classes:
+1. **Guest**: Represents a participant in an event.
+2. **GuestsList**: Manages the list of participants.
+3. **Main**: The main interface of the application for user interaction.
 
 ### Class 'Guest'
-Un invitat este definit prin următoarele atribute:
+A guest is defined by the following attributes:
 - last name
 - first name
 - email
 - phone number
 
 ### Class 'GuestsList'
-Clasa `GuestsList` gestionează înscrierile la un eveniment, incluzând:
-- Numărul de locuri disponibile
-- Lista de participanți
-- Lista de așteptare
+The `GuestsList` class manages event enrollments, including:
+- Number of available seats
+- List of participants
+- Waitlist of participants
 
-#### Funcționalități:
-- Adăugarea unei persoane noi
-- Verificarea dacă o persoană este înscrisă
-- Eliminarea unei persoane
-- Actualizarea detaliilor unei persoane
-- Obținerea listei de participanți
-- Obținerea listei de așteptare
-- Obținerea numărului de locuri disponibile
-- Obținerea numărului de participanți
-- Obținerea numărului de persoane din lista de așteptare
-- Obținerea numărului total de persoane înscrise
-- Căutarea parțială după un subșir de caractere
+#### Functionalities:
+- Adding a new person
+- Checking if a person is enrolled
+- Removing a person
+- Updating a person's details
+- Getting the list of participants
+- Getting the waitlist
+- Getting the number of available seats
+- Getting the number of participants
+- Getting the number of people on the waitlist
+- Getting the total number of enrolled people
+- Partial search by substring
 
 ### Class 'Main'
-Clasa `Main` gestionează interacțiunea cu utilizatorul prin linia de comandă și apelează metodele din `GuestsList` pentru a îndeplini cerințele utilizatorului.
+The `Main` class manages user interaction via the command line and calls methods from `GuestsList` to fulfill user requirements.
 
-#### Setul de Comenzi:
-- `help`: Afișează lista de comenzi disponibile
-- `add`: Adaugă o nouă persoană
-- `check`: Verifică dacă o persoană este înscrisă
-- `remove`: Șterge o persoană existentă
-- `update`: Actualizează detaliile unei persoane
-- `guests`: Afișează lista de participanți
-- `waitlist`: Afișează lista de așteptare
-- `available`: Afișează numărul de locuri disponibile
-- `guests_no`: Afișează numărul de persoane care participă la eveniment
-- `waitlist_no`: Afișează numărul de persoane din lista de așteptare
-- `subscribe_no`: Afișează numărul total de persoane înscrise
-- `search`: Caută invitații după un subșir de caractere
-- `quit`: Închide aplicația
-
+#### Command Set:
+- `help`: Displays the list of available commands
+- `add`: Adds a new person
+- `check`: Checks if a person is enrolled
+- `remove`: Removes an existing person
+- `update`: Updates details of a person
+- `guests`: Displays the list of participants
+- `waitlist`: Displays the waitlist
+- `available`: Displays the number of available seats
+- `guests_no`: Displays the number of event participants
+- `waitlist_no`: Displays the number of people on the waitlist
+- `subscribe_no`: Displays the total number of enrolled people
+- `search`: Searches guests by substring
+- `quit`: Closes the application
